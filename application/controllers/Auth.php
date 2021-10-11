@@ -36,7 +36,6 @@ class Auth extends CI_Controller
         $user_id = $this->auth->get_id($id);
         //var_dump($user_id[0]['status']);
         if ($user[0] > 0  && $user_id[0]['status'] == 7) {
-
             $data = [
                 'msg' => $user[0],
                 'detail' => $user_id[0]

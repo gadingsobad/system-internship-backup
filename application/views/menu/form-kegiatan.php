@@ -42,32 +42,6 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="example-date-input" class="col-form-label text-right col-lg-3 col-sm-12">Start</label>
-                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                <div class="input-group timepicker">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="la la-clock-o"></i>
-                                        </span>
-                                    </div>
-                                    <input class="form-control" id="start-time" name="start-time" placeholder="Select time" type="time">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="example-date-input" class="col-form-label text-right col-lg-3 col-sm-12">Finish</label>
-                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                <div class="input-group timepicker">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="la la-clock-o"></i>
-                                        </span>
-                                    </div>
-                                    <input class="form-control" id="finish-time" name="finish-time" placeholder="Select time" type="time">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
                             <label class="col-form-label text-right col-lg-3 col-sm-12">Pembimbing</label>
                             <div class="col-lg-4 col-md-9 col-sm-12">
                                 <select class="form-control selectpicker" name="pembimbing">
@@ -82,15 +56,6 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-form-label text-right col-lg-3 col-sm-12">Foto</label>
-                            <div class="col-lg-4 col-md-9 col-sm-12">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="customFile" name="customFile">
-                                    <label class="custom-file-label" for="customFile">Choose file</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
                             <label class="col-form-label text-right col-lg-3 col-sm-12">Divisi</label>
                             <div class="col-lg-4 col-md-9 col-sm-12">
                                 <select class="form-control selectpicker" name="divisi">
@@ -102,6 +67,15 @@
                                     }
                                     ?>
                                 </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label text-right col-lg-3 col-sm-12">Foto</label>
+                            <div class="col-lg-4 col-md-9 col-sm-12">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="customFile" name="customFile">
+                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">

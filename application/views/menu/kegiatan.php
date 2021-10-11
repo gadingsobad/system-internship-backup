@@ -62,8 +62,6 @@
                                     <th scope="col">No</th>
                                     <th scope="col">Judul</th>
                                     <th scope="col">Tanggal</th>
-                                    <th scope="col">Start</th>
-                                    <th scope="col">Finish </th>
                                     <th scope="col">Foto Kegiatan</th>
                                     <th scope="col">Divisi</th>
                                     <th scope="col">Pembimbing</th>
