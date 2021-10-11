@@ -34,6 +34,13 @@ class Kegiatan extends CI_Controller
         //var_dump($data['data_user_detail']);
     }
 
+    public function welcome()
+    {
+        $data['data_user'] = $this->session->userdata(['msg'][0]);
+        $data['image'] = $this->m_user->curl_image();
+        $this->load->view('menu/welcome', $data);
+    }
+
     public function add_data()
     {
         $data['data_user_detail'] = $this->session->userdata(['detail'][0]);

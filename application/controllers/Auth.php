@@ -27,7 +27,6 @@ class Auth extends CI_Controller
         }
     }
 
-
     private function _login()
     {
         $username = $this->input->post('username');
@@ -44,7 +43,7 @@ class Auth extends CI_Controller
             ];
             $this->session->set_userdata($data);
             //var_dump($data);
-            redirect('kegiatan');
+            redirect('kegiatan/welcome');
         } else {
             $this->session->set_flashdata('message', '<div class="d-flex flex-row-reverse"><div class="alert alert-danger animated fadeInDown mr-5 position-absolute">
             Username atau Password Wrong!
