@@ -90,8 +90,6 @@
                                         <th scope="row"><?= $no++ ?></th>
                                         <td><?= $value['tittle']; ?></td>
                                         <td><?= $value['date']; ?></td>
-                                        <td><?= $value['start']; ?></td>
-                                        <td><?= $value['finish']; ?></td>
                                         <td>
                                             <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
                                                 <div class="symbol-label" style="background-image: url('<?php echo base_url(); ?>assets/foto/<?php echo $value['foto'] ?>')"></div>
