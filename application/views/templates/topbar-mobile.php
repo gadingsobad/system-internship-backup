@@ -2,6 +2,25 @@
     .header-mobile {
         background-color: #15499a;
     }
+
+    .header-mobile .burger-icon span {
+        background-color: #fff;
+    }
+
+    .header-mobile .burger-icon span::after {
+        background-color: #fff;
+    }
+
+    .header-mobile .burger-icon span::before,
+    .header-mobile .burger-icon span::after {
+        background-color: #fff;
+    }
+
+    .header-mobile .btn .svg-icon svg g [fill] {
+        -webkit-transition: fill 0.3s ease;
+        transition: fill 0.3s ease;
+        fill: #fff;
+    }
 </style>
 <!--begin::Body-->
 
