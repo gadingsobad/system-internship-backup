@@ -11,8 +11,7 @@
                 <div class="d-flex flex-column-fluid flex-column justify-content-between py-9 px-7 py-lg-13 px-lg-35">
                     <!--begin::Logo-->
                     <a href="#" class="text-center pt-2">
-                        <img src="<?= base_url('assets/'); ?>media/solo-abadi/logo-sobad.png" class="max-h-75px" alt="" />
-                        <h5 class="display4 my-7 " style="color: #15499a;">Sugeng Rawuh</h5>
+                        <img src="<?= base_url('assets/'); ?>media/solo-abadi/logo-sobad.png" class="max-h-40px" alt="" />
                     </a>
                     <!--end::Logo-->
                     <!--begin::Aside body-->
@@ -23,7 +22,7 @@
                             <form class="form" novalidate="novalidate" method="post" action="<?= base_url('auth'); ?>">
                                 <!--begin::Title-->
                                 <div class="text-center pb-8">
-                                    <h2 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">Sign In</h2>
+                                    <h2 class="font-weight-bolder text-dark font-size-h2 font-size-h1-lg">Masuk</h2>
                                 </div>
                                 <!--end::Title-->
                                 <!--begin::Form group-->
@@ -45,7 +44,7 @@
                                 <!--end::Form group-->
                                 <!--begin::Action-->
                                 <div class="text-center pt-2">
-                                    <button type="submit" class="btn btn-dark font-weight-bolder font-size-h6 px-8 py-4 my-3">Sign In</button>
+                                    <button type="submit" class="btn font-weight-bolder font-size-h6 px-8 py-4 my-3" style="background-color:#15499a; color:white">Masuk</button>
                                 </div>
                                 <!--end::Action-->
                             </form>
@@ -55,23 +54,26 @@
                     </div>
                     <!--end::Aside body-->
                 </div>
+                <div class="container position-absolute" style="bottom:0">
+                    <div class="row">
+                        <div class="col" style="text-align: left;">
+                            <p>Kreatif Bekerja Ikhlas Melayani</p>
+                        </div>
+                        <div class=" col" style="text-align: right;">
+                            <p>
+                                ©<?php echo date("Y"); ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 <!--end: Aside Container-->
             </div>
             <!--begin::Aside-->
             <!--begin::Content-->
-            <div class="content order-1 order-lg-2 d-flex flex-column w-100 pb-0" style="background-color: #B1DCED;">
-                <!--begin::Title-->
-                <?= $this->session->flashdata('message'); ?>
-                <div class="d-flex flex-column justify-content-center text-center pt-lg-40 pt-md-5 pt-sm-5 px-lg-0 pt-5 px-7">
-                    <h3 class="display4 font-weight-bolder my-7 text-dark" style="color: #986923;">Solo Abadi Group</h3>
-                    <p class="font-weight-bolder font-size-h2-md font-size-lg text-dark opacity-70">Kreatif Bekerja Ikhlas Melayani
-                        <br />Team Work Make Dream Work
-                    </p>
+            <div class="content order-1  d-flex flex-column w-100 p-0 m-0">
+                <div class=" w-100">
+                    <img src="<?= base_url('assets/'); ?>media/solo-abadi/sobad-login-rev.jpg" class="img-fluid" alt="...">
                 </div>
-                <!--end::Title-->
-                <!--begin::Image-->
-                <div class="content-img d-flex flex-row-fluid bgi-no-repeat bgi-position-y-bottom bgi-position-x-center" style="background-image: url(<?= base_url('assets/'); ?>media/svg/illustrations/login-visual-2.svg);"></div>
-                <!--end::Image-->
             </div>
             <!--end::Content-->
         </div>

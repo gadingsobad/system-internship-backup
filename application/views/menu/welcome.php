@@ -27,26 +27,59 @@
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="<?= base_url('assets/'); ?>media/solo-abadi/icon-sobad.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+    <style>
+        @media only screen and (max-width: 880px) {
+            .content.order-1.d-flex.justify-content-end.flex-column.p-0.m-0 {
+                max-width: 100% !important;
+            }
+
+            .order-2.order-lg-1.d-flex.justify-content-end.flex-column {
+                max-width: 100% !important;
+                padding-left: 5% !important;
+                padding-top: 10% !important;
+                padding-right: 5% !important;
+            }
+        }
+    </style>
 </head>
 
-<body style="background: #fff;">
-    <div class="container h-100">
-        <div class="row align-items-end h-100">
-            <div class="col">
-                <div class=" w-100" style="margin-bottom:20%; padding-left:30%">
-                    <h4 class="font-weight-bolder text-lg-left">Selamat Datang</h4>
-                    <h1 class="font-weight-bolder text-lg-left display-3" style="color: #15499a;"><?= ($data_user['name']) ?></h1>
-                    <p class="font-weight-bolder">Semoga Harimu Menyenangkan</p>
-                    <a class="btn mt-15 pl-10 pr-10" href="<?= site_url('kegiatan') ?>" role="button" style="background-color:#15499A; color:white">Lanjut</a>
+<!--begin::Body-->
+
+<body class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+    <!--begin::Main-->
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Login-->
+        <div class="d-flex flex-column flex-lg-row flex-column-fluid bg-white">
+            <!--begin::Aside-->
+            <div class="order-2 order-lg-1 d-flex justify-content-end flex-column " style="max-width:50%; padding-left:20%; padding-bottom:10%;">
+                <!--begin: Aside Container-->
+                <div class="d-flex flex-column justify-content-between ">
+                    <!--end::Logo-->
+                    <!--begin::Aside body-->
+                    <div class="d-flex justify-content-end  flex-column flex-bottom">
+                        <div class=" w-100">
+                            <h4 class=" font-weight-bolder text-lg-left">Selamat Datang</h4>
+                            <h1 class="font-weight-bolder text-lg-left display-3" style="color: #15499a;"><?= ($data_user['name']) ?></h1>
+                            <p class="font-weight-bolder">Sudah siap untuk bercerita hari ini?</p>
+                            <a class="btn mt-15 pl-10 pr-10" href="<?= site_url('kegiatan') ?>" role="button" style="background-color:#15499A; color:white">Bercerita Sekarang</a>
+                        </div>
+                    </div>
+                    <!--end::Aside body-->
+                </div>
+                <!--end: Aside Container-->
+            </div>
+            <!--begin::Aside-->
+            <!--begin::Content-->
+            <div class="content order-1  d-flex justify-content-end flex-column  p-0 m-0" style="max-width: 50%;">
+                <div class=" w-100" style="margin-left:-10%;">
+                    <img src="https://s.soloabadi.com/system-absen/asset/img/user/<?= $image['msg'][0]['notes_pict']; ?>" class=" img-fluid" alt="...">
                 </div>
             </div>
-            <div class="col ">
-                <div class=" w-100" style="margin-left:-15%">
-                    <img src="https://s.soloabadi.com/system-absen/asset/img/user/<?= $image['msg'][0]['notes_pict']; ?>" class="img-fluid" alt="...">
-                </div>
-            </div>
+            <!--end::Content-->
         </div>
+        <!--end::Login-->
     </div>
+    <!--end::Main-->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script>

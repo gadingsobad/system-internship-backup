@@ -56,15 +56,15 @@
                 <li <?= $this->uri->segment(1) == 'sertivikat'  ? 'class="menu-item menu-item-active" style="background: #639AEF !important;" ' : 'class="menu-item"' ?> aria-haspopup="true">
                     <a href="<?= site_url('sertivikat') ?>" class="menu-link">
                         <i class="fas fa-award mr-5 ml-3" style="color:white;"></i>
-                        <h5 class="menu-text">Sertivikat</h5>
+                        <h5 class="menu-text">Sertifikat</h5>
                     </a>
                 </li>
             </ul>
             <!--end::Menu Nav-->
 
-            <div style="position:absolute; bottom:0; margin-left:13%">
-                <div class=" text-center">
-                    <a href="https://soloabadi.com/en/" target="_blank" class="text-white">Solo Abadi Official System<br>2021©</br></a>
+            <div style="position:absolute; bottom:0;">
+                <div class="col">
+                    <a href="https://soloabadi.com/en/" target="_blank" class="text-white">Solo Abadi Official System<br><?php echo date("Y") ?>©</br></a>
                 </div>
 
             </div>
