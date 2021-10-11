@@ -28,7 +28,7 @@
                                 <!--end::Title-->
                                 <!--begin::Form group-->
                                 <div class="form-group">
-                                    <label class="font-size-h6 font-weight-bolder text-dark">Email</label>
+                                    <label class="font-size-h6 font-weight-bolder text-dark">Username</label>
                                     <input class="form-control form-control-solid h-auto py-7 px-6 rounded-lg" type="text" id="username" name="username" autocomplete="off" />
                                     <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
@@ -64,7 +64,7 @@
                 <?= $this->session->flashdata('message'); ?>
                 <div class="d-flex flex-column justify-content-center text-center pt-lg-40 pt-md-5 pt-sm-5 px-lg-0 pt-5 px-7">
                     <h3 class="display4 font-weight-bolder my-7 text-dark" style="color: #986923;">Solo Abadi Group</h3>
-                    <p class="font-weight-bolder font-size-h2-md font-size-lg text-dark opacity-70">Bekerja Ikhlas Melayani
+                    <p class="font-weight-bolder font-size-h2-md font-size-lg text-dark opacity-70">Kreatif Bekerja Ikhlas Melayani
                         <br />Team Work Make Dream Work
                     </p>
                 </div>

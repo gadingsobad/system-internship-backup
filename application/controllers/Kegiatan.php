@@ -36,6 +36,7 @@ class Kegiatan extends CI_Controller
 
     public function add_data()
     {
+        $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
 
         $data['title'] = 'Dashboard';
         $data['data_user'] = $this->session->userdata(['msg'][0]);
@@ -53,6 +54,7 @@ class Kegiatan extends CI_Controller
 
     public function tambah_kegiatan()
     {
+        $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
         $user = $this->session->userdata('msg');
         $tittle = $this->input->post('tittle');
         $id_user = ($user['ID']);
@@ -100,6 +102,7 @@ class Kegiatan extends CI_Controller
 
     public function edit($id)
     {
+        $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
         $where = array('ID' => $id);
         $datas['kegiatan'] = $this->m_kegiatan->edit_data($where, 'kegiatan')->result_array();
         $data['option_pembimbing'] = $this->m_kegiatan->option_pembimbing();

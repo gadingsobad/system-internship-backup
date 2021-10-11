@@ -11,6 +11,10 @@
     .menu-nav>.menu-item>.menu-link .menu-text {
         color: #fff !important;
     }
+
+    .aside-menu .menu-nav {
+        padding: 5px 0;
+    }
 </style>
 <div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
     <!--begin::Brand-->
@@ -41,16 +45,16 @@
                 </li>
             </ul>
             <ul class="menu-nav">
-                <li <?= $this->uri->segment(1) == ''  ? 'class="menu-item menu-item-active" style="background: #639AEF !important;" ' : 'class="menu-item"' ?> aria-haspopup="true">
-                    <a href="<?= site_url('kegiatan') ?>" class="menu-link">
+                <li <?= $this->uri->segment(1) == 'report'  ? 'class="menu-item menu-item-active" style="background: #639AEF !important;" ' : 'class="menu-item"' ?> aria-haspopup="true">
+                    <a href="<?= site_url('report') ?>" class="menu-link">
                         <i class="far fa-file-alt mr-5 ml-3" style="color:white;"></i>
                         <h5 class="menu-text">Laporan Kegiatan</h5>
                     </a>
                 </li>
             </ul>
             <ul class="menu-nav">
-                <li <?= $this->uri->segment(1) == ''  ? 'class="menu-item menu-item-active" style="background: #639AEF !important;" ' : 'class="menu-item"' ?> aria-haspopup="true">
-                    <a href="<?= site_url('kegiatan') ?>" class="menu-link">
+                <li <?= $this->uri->segment(1) == 'sertivikat'  ? 'class="menu-item menu-item-active" style="background: #639AEF !important;" ' : 'class="menu-item"' ?> aria-haspopup="true">
+                    <a href="<?= site_url('sertivikat') ?>" class="menu-link">
                         <i class="fas fa-award mr-5 ml-3" style="color:white;"></i>
                         <h5 class="menu-text">Sertivikat</h5>
                     </a>
