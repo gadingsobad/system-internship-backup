@@ -66,8 +66,6 @@ class Kegiatan extends CI_Controller
         $tittle = $this->input->post('tittle');
         $id_user = ($user['ID']);
         $date = $this->input->post('date');
-        $start = $this->input->post('start-time');
-        $finish = $this->input->post('finish-time');
         $pembimbing = $this->input->post('pembimbing');
         $foto = $_FILES['customFile'];
         $divisi = $this->input->post('divisi');
@@ -87,8 +85,6 @@ class Kegiatan extends CI_Controller
             'tittle' => $tittle,
             'id_user' => $id_user,
             'date' => $date,
-            'start' => $start,
-            'finish' => $finish,
             'pembimbing' => $pembimbing,
             'foto' => $foto,
             'divisi' => $divisi,
@@ -130,8 +126,6 @@ class Kegiatan extends CI_Controller
         $id = $this->input->post('id');
         $tittle = $this->input->post('tittle');
         $date = $this->input->post('date');
-        $start = $this->input->post('start-time');
-        $finish = $this->input->post('finish-time');
         $pembimbing = $this->input->post('pembimbing');
         $image = $this->input->post('image');
         $foto = $_FILES['customFile'];
@@ -151,8 +145,6 @@ class Kegiatan extends CI_Controller
             $data = array(
                 'tittle' => $tittle,
                 'date' => $date,
-                'start' => $start,
-                'finish' => $finish,
                 'pembimbing' => $pembimbing,
                 'foto' => $image,
                 'divisi' => $divisi,
@@ -163,8 +155,6 @@ class Kegiatan extends CI_Controller
             $data = array(
                 'tittle' => $tittle,
                 'date' => $date,
-                'start' => $start,
-                'finish' => $finish,
                 'pembimbing' => $pembimbing,
                 'foto' => $x,
                 'divisi' => $divisi,
