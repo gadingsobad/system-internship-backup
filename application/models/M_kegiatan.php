@@ -22,14 +22,20 @@ class M_kegiatan extends CI_Model
     }
 
     //mengambil dan memfilter data dari table "project" sesuai session
-    public function get_kegiatan($id_user = '')
+    public function get_kegiatan($id_user = '', $limit, $start)
     {
         $this->db->select('*');
+        $this->db->limit($limit, $start);
         $this->db->from('kegiatan');
         $this->db->where("(id_user=$id_user)");
         $query = $this->db->get();
 
         return $query;
+    }
+
+    public function count_kegiatan()
+    {
+        return $this->db->get('kegiatan')->num_rows();
     }
 
     function get_mentor_name($name_id = '')
@@ -87,5 +93,17 @@ class M_kegiatan extends CI_Model
     {
         $this->db->where($where);
         $this->db->update($table, $data);
+    }
+
+    public function get_keyword($keyword)
+    {
+        $this->db->select('*');
+        $this->db->from('kegiatan');
+        $this->db->like('tittle', $keyword);
+        $this->db->or_like('date', $keyword);
+        $this->db->or_like('pembimbing', $keyword);
+        $this->db->or_like('divisi', $keyword);
+        $this->db->or_like('detail', $keyword);
+        return $this->db->get()->result_array();
     }
 }

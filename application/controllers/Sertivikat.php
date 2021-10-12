@@ -19,10 +19,6 @@ class Sertivikat extends CI_Controller
         $this->auth->curl_login();
         $data['data_user'] = $this->session->userdata(['msg'][0]);
         $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
-        $session = ($data['data_user']);
-        $data_session = ($session['ID']);
-        $data['kegiatan'] = $this->m_kegiatan->get_kegiatan($data_session)->result_array();
-        $data['title'] = 'Dashboard';
         $data['image'] = $this->m_user->curl_image();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/topbar-mobile', $data);

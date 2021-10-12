@@ -16,12 +16,53 @@ class Kegiatan extends CI_Controller
 
     public function index()
     {
+        $this->load->library('pagination');
+        $config['base_url'] = 'http://localhost/system-internship/kegiatan/index';
+        $config['total_rows'] = $this->m_kegiatan->count_kegiatan();
+        $config['per_page'] = 10;
+        // Styling
+        $config['full_tag_open'] = '<div class="d-flex justify-content-between align-items-center flex-wrap"><div class="d-flex flex-wrap py-2 mr-3">';
+        $config['full_tag_close'] = '</div></div>';
+
+        $config['first_link'] = '<i class="ki ki-bold-double-arrow-back icon-xs"></i>';
+        $config['first_tag_open'] = '<li class="btn btn-icon btn-sm btn-light mr-2 my-1">';
+        $config['first_tag_close'] = '</li>';
+
+        $config['last_link'] = ' <i class="ki ki-bold-double-arrow-next icon-xs"></i>';
+        $config['last_tag_open'] = '<li class="btn btn-icon btn-sm btn-light mr-2 my-1">';
+        $config['last_tag_close'] = '</li>';
+
+        $config['next_link'] = ' <i class="ki ki-bold-arrow-next icon-xs"></i>';
+        $config['next_tag_open'] = '<li class="btn btn-icon btn-sm btn-light mr-2 my-1">';
+        $config['next_tag_close'] = '</li>';
+
+        $config['prev_link'] = ' <i class="ki ki-bold-arrow-back icon-xs"></i>';
+        $config['prev_tag_open'] = '<li class="btn btn-icon btn-sm btn-light mr-2 my-1">';
+        $config['prev_tag_close'] = '</li>';
+
+        $config['cur_tag_open'] = '<li class="btn btn-icon btn-sm border-0 btn-light btn-hover-primary active mr-2 my-1">';
+        $config['cur_tag_close'] = '</li>';
+
+        $config['num_tag_open'] = '<li class="btn btn-icon btn-sm btn-light mr-2 my-1">';
+        $config['num_tag_close'] = '</li>';
+
+        $config['attributes'] = array('class' => 'btn');
+
+
+        $this->pagination->initialize($config);
+
+
+
+
+
+
         $this->auth->curl_login();
         $data['data_user'] = $this->session->userdata(['msg'][0]);
         $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
         $session = ($data['data_user']);
         $data_session = ($session['ID']);
-        $data['kegiatan'] = $this->m_kegiatan->get_kegiatan($data_session)->result_array();
+        $data['start'] = $this->uri->segment(3);
+        $data['kegiatan'] = $this->m_kegiatan->get_kegiatan($data_session, $config['per_page'], $data['start'])->result_array();
         $data['title'] = 'Dashboard';
         $data['image'] = $this->m_user->curl_image();
         $this->load->view('templates/header', $data);
@@ -55,6 +96,25 @@ class Kegiatan extends CI_Controller
         $this->load->view('templates/topbar-mobile', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('menu/form-kegiatan', $data);
+        $this->load->view('templates/sidebar');
+        $this->load->view('templates/footer');
+    }
+
+    public function search()
+    {
+        $data['start'] = $this->uri->segment(3);
+        $keyword = $this->input->post('keyword');
+        $data['kegiatan'] = $this->m_kegiatan->get_keyword($keyword);
+        $this->auth->curl_login();
+        $data['data_user'] = $this->session->userdata(['msg'][0]);
+        $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
+        $data['start'] = $this->uri->segment(3);
+        $data['title'] = 'Dashboard';
+        $data['image'] = $this->m_user->curl_image();
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/topbar-mobile', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('menu/kegiatan', $data);
         $this->load->view('templates/sidebar');
         $this->load->view('templates/footer');
     }

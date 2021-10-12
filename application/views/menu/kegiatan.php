@@ -12,11 +12,12 @@
                 <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-5 bg-gray-200"></div>
                 <!--end::Separator-->
                 <!--begin::Search Form-->
+                <?php echo form_open('kegiatan/search') ?>
                 <div class="d-flex align-items-center" id="kt_subheader_search">
                     <!--<span class="text-dark-50 font-weight-bold" id="kt_subheader_total">450 Total</span>-->
                     <form class="ml-5">
                         <div class="input-group input-group-sm input-group-solid" style="max-width: 175px">
-                            <input type="text" class="form-control" id="kt_subheader_search_form" placeholder="Search...">
+                            <input type="text" name="keyword" class="form-control" id="kt_subheader_search_form" placeholder="Search...">
                             <div class="input-group-append">
                                 <span class="input-group-text">
                                     <span class="svg-icon">
@@ -37,6 +38,7 @@
                     </form>
                 </div>
                 <!--end::Search Form-->
+                <?php echo form_close() ?>
             </div>
             <!--end::Details-->
             <!--begin::Toolbar-->
@@ -71,7 +73,6 @@
                                 </tr>
                             </thead>
                             <?php
-                            $no = 1;
                             foreach ($kegiatan as $value) : ?>
                                 <?php
 
@@ -87,7 +88,7 @@
                                 ?>
                                 <tbody>
                                     <tr>
-                                        <th scope="row"><?= $no++ ?></th>
+                                        <th scope="row"><?= ++$start ?></th>
                                         <td><?= $value['tittle']; ?></td>
                                         <td><?= $value['date']; ?></td>
                                         <td>
@@ -107,6 +108,7 @@
                                 </tbody>
                             <?php endforeach; ?>
                         </table>
+                        <?php echo $this->pagination->create_links(); ?>
                     </div>
                 </div>
             </div>
