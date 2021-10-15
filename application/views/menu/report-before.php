@@ -20,7 +20,7 @@
             <div class="card h-100">
                 <div class="card-body">
                     <div class="col text-center " style="padding-top:15%">
-                        <h3>Silahkan selesaikan kegiatan dahulu untuk unduh laporan kegiatan</h3>
+                        <h3>Hallo! Untuk mendapatkan laporan magang, harap selesaikan jadwal magang mu terlebih dahulu ya. </h3>
                         <a class="btn mt-5" href="<?= site_url('kegiatan') ?>" role="button" style="background-color:#15499A; color:white">Selesaikan</a>
                     </div>
                 </div>

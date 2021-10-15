@@ -33,6 +33,16 @@ class M_kegiatan extends CI_Model
         return $query;
     }
 
+    public function kegiatan_pdf()
+    {
+        $this->db->select('*');
+        $this->db->from('kegiatan');
+        //$this->db->where("(id_user=$id_user)");
+        $query = $this->db->get();
+
+        return $query;
+    }
+
     public function count_kegiatan()
     {
         return $this->db->get('kegiatan')->num_rows();

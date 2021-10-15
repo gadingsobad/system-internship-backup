@@ -34,4 +34,51 @@ class Sertivikat extends CI_Controller
 
         //var_dump($data['data_user_detail']['_resign_date']);
     }
+
+    public function cetak()
+    {
+        $this->load->library('dompdf_gen');
+        $this->dompdf_gen->generate('menu/print-sertifikat');
+    }
+
+    public function cetak2()
+    {
+        ob_start();
+        $data['data_user'] = $this->session->userdata(['msg'][0]);
+        $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
+        $entry_date = ($data['data_user_detail']['_entry_date']);
+        $resign_date = ($data['data_user_detail']['_resign_date']);
+        $data['entry_date'] = date("F d, Y", strtotime($entry_date));
+        $data['resign_date'] = date("F d, Y", strtotime($resign_date));
+        $this->load->view('menu/print-sertifikat', $data);
+        $html = ob_get_contents();
+        ob_end_clean();
+
+        require './assets/html2pdf/autoload.php';
+
+        $pdf = new Spipu\Html2Pdf\Html2Pdf('L', 'A4', 'en');
+        $pdf->WriteHTML($html);
+        $pdf->Output('Sertifikat Internship.pdf');
+    }
+
+
+    public function coba()
+    {
+        $data['data_user'] = $this->session->userdata(['msg'][0]);
+        $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
+        $entry_date = ($data['data_user_detail']['_entry_date']);
+        $resign_date = ($data['data_user_detail']['_resign_date']);
+        $data['entry_date'] = date("F d, Y", strtotime($entry_date));
+        $data['resign_date'] = date("F d, Y", strtotime($resign_date));
+        $this->load->view('menu/print-sertifikat', $data);
+    }
+
+    public function qr_code()
+    {
+        $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
+        $x =  $data['ID'];
+        $qrCode = new \Endroid\QrCode\QrCode($x);
+
+        $qrCode->writeFile('upload/qr-code/qrcode.png');
+    }
 }
