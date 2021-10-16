@@ -61,7 +61,7 @@
                             <h3 style="margin-top: -5px;">Dian Untoro</h3>
                             <p style="margin-top:-15px">Director</p>
                             <?php
-                            $qrCode = new \Endroid\QrCode\QrCode("www.soloabadi.com");
+                            $qrCode = new \Endroid\QrCode\QrCode($data_user_detail['ID']);
                             $qrCode->writeFile('upload/qr-code/' . $data_user_detail['ID'] . '.png');
                             ?>
                             <div>

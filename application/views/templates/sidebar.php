@@ -53,8 +53,8 @@
                 </li>
             </ul>
             <ul class="menu-nav">
-                <li <?= $this->uri->segment(1) == 'sertivikat'  ? 'class="menu-item menu-item-active" style="background: #639AEF !important;" ' : 'class="menu-item"' ?> aria-haspopup="true">
-                    <a href="<?= site_url('sertivikat') ?>" class="menu-link">
+                <li <?= $this->uri->segment(1) == 'sertifikat'  ? 'class="menu-item menu-item-active" style="background: #639AEF !important;" ' : 'class="menu-item"' ?> aria-haspopup="true">
+                    <a href="<?= site_url('sertifikat') ?>" class="menu-link">
                         <i class="fas fa-award mr-5 ml-3" style="color:white;"></i>
                         <h5 class="menu-text">Sertifikat</h5>
                     </a>

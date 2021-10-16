@@ -17,8 +17,8 @@
         <!--begin::Container-->
         <div class="container">
             <!--begin::content-->
-            <a href="<?= site_url('sertivikat/cetak2') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Print2</a>
-            <a href="<?= site_url('sertivikat/coba') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Coba</a>
+            <a href="<?= site_url('sertifikat/print') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Print2</a>
+            <a href="<?= site_url('sertifikat/coba') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Coba</a>
 
             <!--end::content-->
         </div>

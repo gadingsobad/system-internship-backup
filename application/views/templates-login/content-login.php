@@ -68,7 +68,7 @@
                 </div>
                 <!--end: Aside Container-->
             </div>
-            <div class="content order-1  d-flex flex-column w-100 p-0 m-0" style="background-image: url('<?= base_url('assets/'); ?>media/solo-abadi/sobad-login-rev.jpg');background-repeat: round;"></div>
+            <div class="content order-1  d-flex flex-column w-100 p-0 m-0" style="background-image: url('<?= base_url('assets/'); ?>media/solo-abadi/sobad-login-rev2.jpg');background-repeat: round;"></div>
         </div>
         <!--end::Login-->
     </div>

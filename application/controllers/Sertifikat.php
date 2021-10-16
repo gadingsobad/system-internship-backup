@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Sertivikat extends CI_Controller
+class Sertifikat extends CI_Controller
 {
     public function __construct()
     {
@@ -41,7 +41,7 @@ class Sertivikat extends CI_Controller
         $this->dompdf_gen->generate('menu/print-sertifikat');
     }
 
-    public function cetak2()
+    public function print()
     {
         ob_start();
         $data['data_user'] = $this->session->userdata(['msg'][0]);
@@ -71,14 +71,5 @@ class Sertivikat extends CI_Controller
         $data['entry_date'] = date("F d, Y", strtotime($entry_date));
         $data['resign_date'] = date("F d, Y", strtotime($resign_date));
         $this->load->view('menu/print-sertifikat', $data);
-    }
-
-    public function qr_code()
-    {
-        $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
-        $x =  $data['ID'];
-        $qrCode = new \Endroid\QrCode\QrCode($x);
-
-        $qrCode->writeFile('upload/qr-code/qrcode.png');
     }
 }
