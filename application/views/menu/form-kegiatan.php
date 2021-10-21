@@ -87,7 +87,7 @@
                         <div class="form-group row">
                             <label class="col-form-label text-right col-lg-3 col-sm-12">Detail</label>
                             <div class="col-lg-4 col-md-9 col-sm-12">
-                                <textarea class="form-control" id="detail" name="detail" rows="3"></textarea>
+                                <textarea class="form-control" id="kt_maxlength_5" name="kt_maxlength_5" maxlength="1100" placeholder="" rows="6"></textarea>
                             </div>
                         </div>
                     </div>

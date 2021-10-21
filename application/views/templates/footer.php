@@ -413,6 +413,8 @@
         <script src="<?= base_url('assets/'); ?>js/pages/widgets.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
         <script src="<?= base_url('assets/'); ?>js/pages/crud/forms/widgets/bootstrap-datepicker.js?v=7.2.8"></script>
+        <script src="<?= base_url('assets/'); ?>js/pages/crud/forms/widgets/bootstrap-maxlength.js?v=7.2.8"></script>
+        <script src="<?= base_url('assets/'); ?>js/pages/crud/forms/widgets/form-repeater.js?v=7.2.8"></script>
         <!--end::Page Scripts-->
         </body>
         <!--end::Body-->

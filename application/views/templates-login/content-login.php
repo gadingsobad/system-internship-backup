@@ -1,4 +1,21 @@
 <!--begin::Body-->
+<style>
+    @media only screen and (min-width: 786px) {
+        .footer-mobile {
+            display: none;
+        }
+
+        .logo {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 786px) {
+        .footer-pc {
+            display: none;
+        }
+    }
+</style>
 
 <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
     <!--begin::Main-->
@@ -11,7 +28,9 @@
                 <div class="d-flex flex-column-fluid flex-column justify-content-between py-9 px-7 py-lg-13 px-lg-35">
                     <!--begin::Logo-->
                     <a href="#" class="text-center pt-2">
-                        <img src="<?= base_url('assets/'); ?>media/solo-abadi/logo-sobad.png" class="max-h-40px" alt="" />
+                        <div class="logo">
+                            <img src="<?= base_url('assets/'); ?>media/solo-abadi/logo-sobad.png" class="max-h-40px" alt="" />
+                        </div>
                     </a>
                     <!--end::Logo-->
                     <!--begin::Aside body-->
@@ -55,8 +74,25 @@
                     <!--end::Aside body-->
                 </div>
                 <div class="container position-absolute" style="bottom:0">
+                    <div class="footer-pc">
+                        <div class="row">
+                            <div class="col" style="text-align: left;">
+                                <p>Kreatif Bekerja Ikhlas Melayani</p>
+                            </div>
+                            <div class=" col" style="text-align: right;">
+                                <p>
+                                    ©<?php echo date("Y"); ?>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end: Aside Container-->
+            </div>
+            <div class="container position-absolute" style="bottom:0">
+                <div class="footer-mobile">
                     <div class="row">
-                        <div class="col" style="text-align: left;">
+                        <div class="col-m" style="text-align: left;">
                             <p>Kreatif Bekerja Ikhlas Melayani</p>
                         </div>
                         <div class=" col" style="text-align: right;">
@@ -66,9 +102,8 @@
                         </div>
                     </div>
                 </div>
-                <!--end: Aside Container-->
             </div>
-            <div class="content order-1  d-flex flex-column w-100 p-0 m-0" style="background-image: url('<?= base_url('assets/'); ?>media/solo-abadi/sobad-login.jpg');background-repeat: round;"></div>
+            <div class="content order-1  d-flex flex-column w-100 p-0 m-0" style="background-image: url('<?= base_url('assets/'); ?>media/solo-abadi/login-1920.jpg');background-repeat: round;"></div>
         </div>
         <!--end::Login-->
     </div>

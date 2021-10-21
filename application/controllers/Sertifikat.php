@@ -19,6 +19,7 @@ class Sertifikat extends CI_Controller
         $this->auth->curl_login();
         $data['data_user'] = $this->session->userdata(['msg'][0]);
         $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
+        //var_dump($data['data_user_detail']);
         $data['image'] = $this->m_user->curl_image();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/topbar-mobile', $data);
@@ -29,6 +30,7 @@ class Sertifikat extends CI_Controller
         if ($data['data_user_detail']['_resign_date'] == date('Y-m-d')) {
             $this->load->view('menu/sertivikat-finished', $data);
         }
+
         $this->load->view('templates/sidebar');
         $this->load->view('templates/footer');
 
@@ -59,6 +61,26 @@ class Sertifikat extends CI_Controller
         $pdf = new Spipu\Html2Pdf\Html2Pdf('L', 'A4', 'en');
         $pdf->WriteHTML($html);
         $pdf->Output('Sertifikat Internship.pdf');
+    }
+
+    public function unduh()
+    {
+        ob_start();
+        $data['data_user'] = $this->session->userdata(['msg'][0]);
+        $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
+        $entry_date = ($data['data_user_detail']['_entry_date']);
+        $resign_date = ($data['data_user_detail']['_resign_date']);
+        $data['entry_date'] = date("F d, Y", strtotime($entry_date));
+        $data['resign_date'] = date("F d, Y", strtotime($resign_date));
+        $this->load->view('menu/print-sertifikat', $data);
+        $html = ob_get_contents();
+        ob_end_clean();
+
+        require './assets/html2pdf/autoload.php';
+
+        $pdf = new Spipu\Html2Pdf\Html2Pdf('L', 'A4', 'en');
+        $pdf->WriteHTML($html);
+        $pdf->Output('Sertifikat Internship.pdf', 'D');
     }
 
 

@@ -1,0 +1,213 @@
+.col-twin {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: inherit;
+}
+
+.col-left {
+	float: left;
+	width: 50%;
+	display: inherit;
+	position: absolute;
+	margin-top: 670px;
+	margin-left: 100px;
+}
+
+.col-right {
+	float: right;
+	width: 50%;
+	position: absolute;
+	margin-left: 550px;
+	margin-top: 700px;
+}
+
+.qrcode {
+	width: 30%;
+
+}
+
+h1 {
+	font-size: 85px;
+	font-weight: bold;
+	color: #15499A;
+
+}
+
+h2 {
+	font-size: 75px;
+	font-weight: bold;
+	color: #15499A;
+}
+
+h3 {
+	font-size: 25px;
+	font-weight: bold;
+	color: #15499A;
+}
+
+h4 {
+	font-size: 25px;
+	color: #639AEF;
+	font-weight: 100;
+}
+
+h5 {
+	color: #15499A;
+	font-size: 17px;
+	font-weight: 100;
+}
+
+h6 {
+	font-size: 16px;
+	font-weight: 100;
+}
+
+
+
+.content-2 {
+	margin-top: -100px;
+}
+
+.line-1 {
+	margin-top: 30px;
+	width: 310px;
+	height: 30px;
+	background-color: yellow;
+}
+
+.content-3 {
+	margin-top: -10px;
+}
+
+.content-4 {
+	margin-top: 120px;
+}
+
+.content-5 {
+	margin-left: 30px;
+}
+
+.content-6 {
+	margin-top: 230px;
+	margin-left: 27px;
+	color: #DFDFDF;
+}
+
+.container {
+	height: 900px;
+}
+
+.image-header {
+	width: 100%;
+	text-align: right;
+
+}
+
+.col-twin2 {
+	display: inherit;
+	position: absolute;
+	width: 100%;
+	height: auto;
+
+}
+
+.column-left {
+	float: left;
+	width: 40%;
+	position: absolute;
+	margin-top: 150px;
+	margin-left: 60px;
+}
+
+.column-right {
+	float: left;
+	width: 50%;
+	position: absolute;
+	margin-left: 440px;
+	margin-top: 230px;
+}
+
+.left {
+	float: left;
+	position: absolute;
+	width: 50%;
+}
+
+.right {
+	float: left;
+	position: absolute;
+	width: 50%;
+	margin-left: 100px;
+}
+
+.form-kotak {
+	padding-bottom: 5px;
+	border: solid #8F8F8F 1px;
+	text-align: left;
+	margin-right: 40px;
+	border-radius: 10px;
+}
+
+.content-kotak {
+	padding-top: -5px;
+	padding-left: 10px;
+}
+
+.container-3 {
+	display: inherit;
+	position: relative;
+	height: 800px;
+}
+
+.content-9 {
+	margin-top: 90px;
+	margin-left: 60px;
+}
+
+.card {
+	border: solid #8F8F8F 1px;
+	border-radius: 15px;
+	width: 590px;
+	height: 20%;
+	margin-top: 10px;
+	margin-left: 60px;
+	padding: 20px;
+
+}
+
+.content-10 {
+	margin-top: 10px;
+	margin-left: 60px;
+}
+
+.content-11 {
+	margin-top: 10px;
+	margin-left: 60px;
+}
+
+.img-kegiatan {
+	width: 30%;
+	border-radius: 20px;
+}
+
+.footer {
+	float: left;
+	width: 50%;
+	position: absolute;
+	margin-top: 830px;
+	margin-left: 50px;
+}
+
+.footer-left {
+	float: left;
+	position: absolute;
+}
+
+.footer-right {
+	float: left;
+	position: absolute;
+	margin-left: 600px;
+	color: #15499A;
+	font-weight: bold;
+}

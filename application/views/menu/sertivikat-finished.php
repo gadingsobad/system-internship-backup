@@ -17,13 +17,30 @@
         <!--begin::Container-->
         <div class="container">
             <!--begin::content-->
-            <a href="<?= site_url('sertifikat/print') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Print2</a>
-            <a href="<?= site_url('sertifikat/coba') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Coba</a>
-
-            <!--end::content-->
+            <div class="card h-100 m-b">
+                <div class="card-body">
+                    <div class="card w-50 shadow p-3 mb-5 bg-white rounded">
+                        <div class="card-body">
+                            <p><?= $data_user_detail['name']; ?></p>
+                            <div style="margin-top: 15%; margin-bottom:10%">
+                                <h1 style="font-weight: 700; font-size:40px; color:black;">Internship</h1>
+                                <h1 style="font-weight: 700; font-size:40px; color:#15499A;">Certificate</h1>
+                            </div>
+                            <p>Batch#3</p>
+                        </div>
+                    </div>
+                    <div class=" col text-center w-50 ">
+                        <a href=" <?= site_url('sertifikat/print') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="padding-left: 40px;
+    padding-right: 40px;">Lihat</a>
+                        <a href="<?= site_url('sertifikat/unduh') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="background-color: #15499A;padding-left: 40px;
+    padding-right: 40px;">Unduh</a>
+                    </div>
+                </div>
+                <!--end::content-->
+            </div>
+            <!--end::Container-->
         </div>
-        <!--end::Container-->
+        <!--end::Entry-->
     </div>
-    <!--end::Entry-->
 </div>
 <!--end::Content-->

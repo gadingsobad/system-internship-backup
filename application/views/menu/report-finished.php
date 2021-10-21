@@ -17,11 +17,30 @@
         <!--begin::Container-->
         <div class="container">
             <!--begin::content-->
-
-            <!--end::content-->
+            <div class="card h-100 m-b">
+                <div class="card-body">
+                    <div class="card w-50 shadow p-3 mb-5 bg-white rounded" style="width: 30% !important;">
+                        <div class="card-body">
+                            <p><?= $data_user_detail['name']; ?></p>
+                            <div style="margin-top: 20%; margin-bottom:20%">
+                                <h1 style="font-weight: 700; font-size:40px; color:black;">Internship</h1>
+                                <h1 style="font-weight: 700; font-size:40px; color:#15499A;">Report</h1>
+                            </div>
+                            <p>Batch#3</p>
+                        </div>
+                    </div>
+                    <div class=" col text-center w-50 " style="width: 30% !important;">
+                        <a href=" <?= site_url('report/print') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="padding-left: 40px;
+    padding-right: 40px;">Lihat</a>
+                        <a href="<?= site_url('report/unduh') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="background-color: #15499A;padding-left: 40px;
+    padding-right: 40px;">Unduh</a>
+                    </div>
+                </div>
+                <!--end::content-->
+            </div>
+            <!--end::Container-->
         </div>
-        <!--end::Container-->
+        <!--end::Entry-->
     </div>
-    <!--end::Entry-->
 </div>
 <!--end::Content-->

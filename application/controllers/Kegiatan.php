@@ -130,7 +130,7 @@ class Kegiatan extends CI_Controller
         $foto = $_FILES['customFile'];
         $divisi = $this->input->post('divisi');
         $link = $this->input->post('link');
-        $detail = $this->input->post('detail');
+        $detail = $this->input->post('kt_maxlength_5');
         if ($foto = '') {
         } else {
             $config['upload_path']  = './assets/foto';
@@ -191,7 +191,7 @@ class Kegiatan extends CI_Controller
         $foto = $_FILES['customFile'];
         $divisi = $this->input->post('divisi');
         $link = $this->input->post('link');
-        $detail = $this->input->post('detail');
+        $detail = $this->input->post('kt_maxlength_5');
 
         $config['upload_path']  = './assets/foto';
         $config['allowed_types'] = 'jpg|png|gif';
