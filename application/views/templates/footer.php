@@ -415,6 +415,7 @@
         <script src="<?= base_url('assets/'); ?>js/pages/crud/forms/widgets/bootstrap-datepicker.js?v=7.2.8"></script>
         <script src="<?= base_url('assets/'); ?>js/pages/crud/forms/widgets/bootstrap-maxlength.js?v=7.2.8"></script>
         <script src="<?= base_url('assets/'); ?>js/pages/crud/forms/widgets/form-repeater.js?v=7.2.8"></script>
+        <script src="<?= base_url('assets/'); ?>js/pages/crud/file-upload/dropzonejs.js?v=7.2.8"></script>
         <!--end::Page Scripts-->
         </body>
         <!--end::Body-->

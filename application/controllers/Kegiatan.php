@@ -51,11 +51,6 @@ class Kegiatan extends CI_Controller
 
         $this->pagination->initialize($config);
 
-
-
-
-
-
         $this->auth->curl_login();
         $data['data_user'] = $this->session->userdata(['msg'][0]);
         $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
@@ -121,36 +116,100 @@ class Kegiatan extends CI_Controller
 
     public function tambah_kegiatan()
     {
+        $this->load->library('upload');
         $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
         $user = $this->session->userdata('msg');
         $tittle = $this->input->post('tittle');
         $id_user = ($user['ID']);
         $date = $this->input->post('date');
         $pembimbing = $this->input->post('pembimbing');
-        $foto = $_FILES['customFile'];
+        $foto1 = $_FILES['foto1'];
+        $foto2 = $_FILES['foto2'];
+        $foto3 = $_FILES['foto3'];
+        $foto4 = $_FILES['foto4'];
         $divisi = $this->input->post('divisi');
         $link = $this->input->post('link');
         $detail = $this->input->post('kt_maxlength_5');
-        if ($foto = '') {
-        } else {
-            $config['upload_path']  = './assets/foto';
-            $config['allowed_types'] = 'jpg|png|gif';
+
+        //var_dump($value);
+        if ($foto1['name'] !== null) {
+            $config['upload_path'] = './assets/foto'; //path folder
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+            $config['encrypt_name'] = FALSE; //Enkripsi nama yang terupload
+            $this->upload->initialize($config);
 
             $this->load->library('upload', $config);
-            $this->upload->do_upload('customFile');
 
-            $foto = $this->upload->data('file_name');
+            $this->upload->do_upload('foto1');
+
+
+
+            $foto1 = $this->upload->data('file_name');
+        } else {
         }
+
+        if ($foto2['name'] !== null) {
+            $config['upload_path'] = './assets/foto'; //path folder
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+            $config['encrypt_name'] = FALSE; //Enkripsi nama yang terupload
+            $this->upload->initialize($config);
+
+            $this->load->library('upload', $config);
+
+            $this->upload->do_upload('foto2');
+
+
+
+            $foto2 = $this->upload->data('file_name');
+        } else {
+        }
+
+        if ($foto3['name'] !== null) {
+            $config['upload_path'] = './assets/foto'; //path folder
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+            $config['encrypt_name'] = FALSE; //Enkripsi nama yang terupload
+            $this->upload->initialize($config);
+
+            $this->load->library('upload', $config);
+
+            $this->upload->do_upload('foto3');
+
+
+
+            $foto3 = $this->upload->data('file_name');
+        } else {
+        }
+        if ($foto4['name'] !== null) {
+            $config['upload_path'] = './assets/foto'; //path folder
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+            $config['encrypt_name'] = FALSE; //Enkripsi nama yang terupload
+            $this->upload->initialize($config);
+
+            $this->load->library('upload', $config);
+
+            $this->upload->do_upload('foto4');
+
+
+
+            $foto4 = $this->upload->data('file_name');
+        } else {
+        }
+
+
         $data = array(
             'tittle' => $tittle,
             'id_user' => $id_user,
             'date' => $date,
             'pembimbing' => $pembimbing,
-            'foto' => $foto,
+            'foto' => $foto1,
+            'foto2' => $foto2,
+            'foto3' => $foto3,
+            'foto4' => $foto4,
             'divisi' => $divisi,
             'link' => $link,
             'detail' => $detail
         );
+
         $this->m_kegiatan->input_kegiatan($data, 'kegiatan');
 
         redirect('kegiatan/index');
@@ -188,43 +247,75 @@ class Kegiatan extends CI_Controller
         $date = $this->input->post('date');
         $pembimbing = $this->input->post('pembimbing');
         $image = $this->input->post('image');
-        $foto = $_FILES['customFile'];
+        $image2 = $this->input->post('image2');
+        $image3 = $this->input->post('image3');
+        $image4 = $this->input->post('image4');
+        $foto = $_FILES['foto1'];
+        $foto2 = $_FILES['foto2'];
+        $foto3 = $_FILES['foto3'];
+        $foto4 = $_FILES['foto4'];
         $divisi = $this->input->post('divisi');
         $link = $this->input->post('link');
         $detail = $this->input->post('kt_maxlength_5');
 
-        $config['upload_path']  = './assets/foto';
-        $config['allowed_types'] = 'jpg|png|gif';
+        if ($foto['name']  !== "") {
+            $config['upload_path']  = './assets/foto';
+            $config['allowed_types'] = 'jpg|png|gif';
 
-        $this->load->library('upload', $config);
-        $this->upload->do_upload('customFile');
+            $this->load->library('upload', $config);
+            $this->upload->do_upload('foto1');
 
-        $x = $this->upload->data('file_name');
-
-        if ($x == null) {
-            $data = array(
-                'tittle' => $tittle,
-                'date' => $date,
-                'pembimbing' => $pembimbing,
-                'foto' => $image,
-                'divisi' => $divisi,
-                'link' => $link,
-                'detail' => $detail
-            );
-        } else {
-            $data = array(
-                'tittle' => $tittle,
-                'date' => $date,
-                'pembimbing' => $pembimbing,
-                'foto' => $x,
-                'divisi' => $divisi,
-                'link' => $link,
-                'detail' => $detail
-            );
+            $images1 = $this->upload->data('file_name');
         }
+
+        if ($foto2['name']  !== "") {
+            $config['upload_path']  = './assets/foto';
+            $config['allowed_types'] = 'jpg|png|gif';
+
+            $this->load->library('upload', $config);
+            $this->upload->do_upload('foto2');
+
+            $images2 = $this->upload->data('file_name');
+        }
+        if ($foto3['name']  !== "") {
+            $config['upload_path']  = './assets/foto';
+            $config['allowed_types'] = 'jpg|png|gif';
+
+            $this->load->library('upload', $config);
+            $this->upload->do_upload('foto3');
+
+            $images3 = $this->upload->data('file_name');
+        }
+        if ($foto4['name']  !== "") {
+            $config['upload_path']  = './assets/foto';
+            $config['allowed_types'] = 'jpg|png|gif';
+
+            $this->load->library('upload', $config);
+            $this->upload->do_upload('foto4');
+
+            $images4 = $this->upload->data('file_name');
+        }
+
+
+        $data = array(
+            'tittle' => $tittle,
+            'date' => $date,
+            'pembimbing' => $pembimbing,
+            'foto' => $images1 == null ? $image : $images1,
+            'foto2' => $images2 == null ? $image2 : $images2,
+            'foto3' => $images3 == null ? $image3 : $images3,
+            'foto4' => $images4 == null ? $image4 : $images4,
+            'divisi' => $divisi,
+            'link' => $link,
+            'detail' => $detail
+        );
+
+        var_dump($foto4);
+
         $where = array(
             'id' => $id
         );
+
         //var_dump($data);
         $this->m_kegiatan->update_data($where, $data, 'kegiatan');
         redirect('kegiatan/index');

@@ -70,11 +70,38 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-form-label text-right col-lg-3 col-sm-12">Foto</label>
+                            <label class="col-form-label text-right col-lg-3 col-sm-12">Foto1</label>
                             <div class="col-lg-4 col-md-9 col-sm-12">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="customFile" name="customFile">
-                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                    <input type="file" class="custom-file-input" id="foto1" name="foto1">
+                                    <label class="custom-file-label" for="foto1">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label text-right col-lg-3 col-sm-12">Foto2</label>
+                            <div class="col-lg-4 col-md-9 col-sm-12">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="foto2" name="foto2">
+                                    <label class="custom-file-label" for="foto2">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label text-right col-lg-3 col-sm-12">Foto3</label>
+                            <div class="col-lg-4 col-md-9 col-sm-12">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="foto3" name="foto3">
+                                    <label class="custom-file-label" for="foto3">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label text-right col-lg-3 col-sm-12">Foto4</label>
+                            <div class="col-lg-4 col-md-9 col-sm-12">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="foto4" name="foto4">
+                                    <label class="custom-file-label" for="foto4">Choose file</label>
                                 </div>
                             </div>
                         </div>

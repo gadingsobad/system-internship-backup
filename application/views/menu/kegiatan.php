@@ -92,10 +92,66 @@
                                         <td><?= $value['tittle']; ?></td>
                                         <td><?= $value['date']; ?></td>
                                         <td>
-                                            <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
-                                                <div class="symbol-label" style="background-image: url('<?php echo base_url(); ?>assets/foto/<?php echo $value['foto'] ?>')"></div>
-                                            </div>
+                                            <?php if ($value['foto'] !== '') { ?>
+
+                                                <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
+                                                    <div class="symbol-label" style="background-image: url('<?php echo base_url(); ?>assets/foto/<?php echo $value['foto'] ?>')"></div>
+                                                </div>
+
+                                            <?php
+                                            } else {
+
+                                            ?>
+
+                                            <?php
+                                            }
+                                            ?>
+                                            <?php if ($value['foto2'] !== '') { ?>
+
+                                                <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
+                                                    <div class="symbol-label" style="background-image: url('<?php echo base_url(); ?>assets/foto/<?php echo $value['foto2'] ?>')"></div>
+                                                </div>
+
+                                            <?php
+                                            } else {
+
+                                            ?>
+
+                                            <?php
+                                            }
+                                            ?>
+                                            <?php if ($value['foto3'] !== '') { ?>
+
+                                                <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
+                                                    <div class="symbol-label" style="background-image: url('<?php echo base_url(); ?>assets/foto/<?php echo $value['foto3'] ?>')"></div>
+                                                </div>
+
+                                            <?php
+                                            } else {
+
+                                            ?>
+
+                                            <?php
+                                            }
+                                            ?>
+                                            <?php if ($value['foto4'] !== '') { ?>
+
+                                                <div class="symbol symbol-60 symbol-2by3 flex-shrink-0">
+                                                    <div class="symbol-label" style="background-image: url('<?php echo base_url(); ?>assets/foto/<?php echo $value['foto4'] ?>')"></div>
+                                                </div>
+
+                                            <?php
+                                            } else {
+
+                                            ?>
+
+                                            <?php
+                                            }
+                                            ?>
                                         </td>
+
+
+
                                         <td><?= $divisi; ?></td>
                                         <td><?= $mentor; ?></td>
                                         <td><?= $value['link']; ?></td>

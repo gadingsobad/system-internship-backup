@@ -88,12 +88,42 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-form-label text-right col-lg-3 col-sm-12">Foto</label>
+                                <label class="col-form-label text-right col-lg-3 col-sm-12">Foto1</label>
                                 <div class="col-lg-4 col-md-9 col-sm-12">
                                     <input type="hidden" id="image" name="image" value="<?= $kegiatans['foto'] ?>">
                                     <div class="custom-file">
-                                        <input type="file" class=" custom-file-input" id="customFile" name="customFile">
-                                        <label class=" custom-file-label" for="customFile"> <?= $kegiatans['foto'] ?></label>
+                                        <input type="file" class=" custom-file-input" id="foto1" name="foto1">
+                                        <label class=" custom-file-label" for="foto1"> <?= $kegiatans['foto'] ?></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-form-label text-right col-lg-3 col-sm-12">Foto2</label>
+                                <div class="col-lg-4 col-md-9 col-sm-12">
+                                    <input type="hidden" id="image2" name="image2" value="<?= $kegiatans['foto2'] ?>">
+                                    <div class="custom-file">
+                                        <input type="file" class=" custom-file-input" id="foto2" name="foto2">
+                                        <label class=" custom-file-label" for="foto2"> <?= $kegiatans['foto2'] ?></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-form-label text-right col-lg-3 col-sm-12">Foto3</label>
+                                <div class="col-lg-4 col-md-9 col-sm-12">
+                                    <input type="hidden" id="image3" name="image3" value="<?= $kegiatans['foto3'] ?>">
+                                    <div class="custom-file">
+                                        <input type="file" class=" custom-file-input" id="foto3" name="foto3">
+                                        <label class=" custom-file-label" for="foto3"> <?= $kegiatans['foto3'] ?></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-form-label text-right col-lg-3 col-sm-12">Foto4</label>
+                                <div class="col-lg-4 col-md-9 col-sm-12">
+                                    <input type="hidden" id="image4" name="image4" value="<?= $kegiatans['foto4'] ?>">
+                                    <div class="custom-file">
+                                        <input type="file" class=" custom-file-input" id="foto4" name="foto4">
+                                        <label class=" custom-file-label" for="foto4"> <?= $kegiatans['foto4'] ?></label>
                                     </div>
                                 </div>
                             </div>
