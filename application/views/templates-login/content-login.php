@@ -8,6 +8,13 @@
         .logo {
             display: none;
         }
+
+        .logo1 {
+            position: absolute;
+            right: 0;
+            padding-right: 20px;
+            padding-top: 30px;
+        }
     }
 
     @media only screen and (max-width: 786px) {
@@ -27,7 +34,7 @@
                 <!--begin: Aside Container-->
                 <div class="d-flex flex-column-fluid flex-column justify-content-between py-9 px-7 py-lg-13 px-lg-35">
                     <!--begin::Logo-->
-                    <a href="#" class="text-center pt-2">
+                    <a href="https://soloabadi.com/" class="text-center pt-2">
                         <div class="logo">
                             <img src="<?= base_url('assets/'); ?>media/solo-abadi/logo-sobad.png" class="max-h-40px" alt="" />
                         </div>
@@ -103,7 +110,13 @@
                     </div>
                 </div>
             </div>
-            <div class="content order-1  d-flex flex-column w-100 p-0 m-0" style="background-image: url('<?= base_url('assets/'); ?>media/solo-abadi/login-1920.jpg');background-repeat: round;"></div>
+            <div class="content order-1  d-flex flex-column w-100 p-0 m-0" style="background-image: url('<?= base_url('assets/'); ?>media/solo-abadi/sobad-login.jpg');background-repeat: round;">
+            </div>
+        </div>
+        <div class="logo1">
+            <a href="https://soloabadi.com/">
+                <img src="<?= base_url('assets/'); ?>media/solo-abadi/logo-sobad-white.png" class="max-h-40px" alt="" />
+            </a>
         </div>
         <!--end::Login-->
     </div>
