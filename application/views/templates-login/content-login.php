@@ -76,7 +76,7 @@
                 <div class="container position-absolute" style="bottom:0">
                     <div class="footer-pc">
                         <div class="row">
-                            <div class="col" style="text-align: left;">
+                            <div class="col" style="text-align: left; ">
                                 <p>Kreatif Bekerja Ikhlas Melayani</p>
                             </div>
                             <div class=" col" style="text-align: right;">
@@ -91,11 +91,11 @@
             </div>
             <div class="container position-absolute" style="bottom:0">
                 <div class="footer-mobile">
-                    <div class="row">
-                        <div class="col-m" style="text-align: left;">
+                    <div class="row" style="padding-bottom: 10px;">
+                        <div class="col-m" style="text-align: left;padding-left:20px">
                             <p>Kreatif Bekerja Ikhlas Melayani</p>
                         </div>
-                        <div class=" col" style="text-align: right;">
+                        <div class=" col" style="text-align: right; padding-right:25px">
                             <p>
                                 ©<?php echo date("Y"); ?>
                             </p>
