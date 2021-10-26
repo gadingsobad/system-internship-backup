@@ -110,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content order-1  d-flex flex-column w-100 p-0 m-0" style="background-image: url('<?= base_url('assets/'); ?>media/solo-abadi/sobad-login.jpg');background-repeat: round;">
+            <div class="content order-1  d-flex flex-column w-100 p-0 m-0" style="background-image: url('<?= base_url('assets/'); ?>media/solo-abadi/sobad-login-rev.jpg');background-repeat: round;">
             </div>
         </div>
         <div class="logo1">
