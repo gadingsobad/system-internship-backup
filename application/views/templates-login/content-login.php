@@ -21,6 +21,10 @@
         .footer-pc {
             display: none;
         }
+
+        .logo1 {
+            display: none;
+        }
     }
 </style>
 
