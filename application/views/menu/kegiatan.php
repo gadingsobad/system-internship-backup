@@ -152,7 +152,7 @@
                                         <td><?= $divisi; ?></td>
                                         <td><?= $mentor; ?></td>
                                         <td><?= $value['link']; ?></td>
-                                        <td><?= (str_word_count($value['detail']) > 60 ? substr($value['detail'], 0, 200) . ".." :  $value['detail']); ?></td>
+                                        <td><?= (str_word_count($value['detail']) > 60 ? substr($value['detail'], 0, 150) . ".." :  $value['detail']); ?></td>
                                         <td nowrap="nowrap">
                                             <div>
                                             </div> <a href="<?= site_url("kegiatan/edit/" . $value['ID']); ?>" class="btn btn-sm btn-clean btn-icon" title="Edit details"> <i class="la la-edit"></i> </a> <a href="<?= site_url("kegiatan/deleted/" . $value['ID']); ?>" class="btn btn-sm btn-clean btn-icon" title="Delete"> <i class="la la-trash"></i> </a>
