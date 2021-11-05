@@ -1,3 +1,26 @@
+<style>
+    .card.w-50.shadow.p-3.mb-5.bg-white.rounded {
+        width: 30% !important;
+    }
+
+    .col {
+        width: 30%;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 786px) {
+        .card.w-50.shadow.p-3.mb-5.bg-white.rounded {
+            width: 70% !important;
+        }
+
+        .col {
+            width: 30%;
+            text-align: center;
+            display: inline;
+            margin-left: 8% !important;
+        }
+    }
+</style>
 <!--begin::Content-->
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <!--begin::Subheader-->
@@ -19,7 +42,7 @@
             <!--begin::content-->
             <div class="card h-100 m-b">
                 <div class="card-body">
-                    <div class="card w-50 shadow p-3 mb-5 bg-white rounded" style="width: 30% !important;">
+                    <div class="card w-50 shadow p-3 mb-5 bg-white rounded">
                         <div class="card-body">
                             <p><?= $data_user_detail['name']; ?></p>
                             <div style="margin-top: 20%; margin-bottom:20%">
@@ -29,11 +52,9 @@
                             <p>Batch#3</p>
                         </div>
                     </div>
-                    <div class=" col text-center w-50 " style="width: 30% !important;">
-                        <a href=" <?= site_url('report/print') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="padding-left: 40px;
-    padding-right: 40px;">Lihat</a>
-                        <a href="<?= site_url('report/unduh') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="background-color: #15499A;padding-left: 40px;
-    padding-right: 40px;">Unduh</a>
+                    <div class="col">
+                        <a href=" <?= site_url('report/print') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Lihat</a>
+                        <a href="<?= site_url('report/unduh') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="background-color: #15499a;">Unduh</a>
                     </div>
                 </div>
                 <!--end::content-->

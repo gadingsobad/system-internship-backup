@@ -1,3 +1,12 @@
+<style>
+    .card.shadow.p-3.mb-5.bg-white.rounded {
+        width: 50%;
+    }
+
+    .col.text-center {
+        width: 50%;
+    }
+</style>
 <!--begin::Content-->
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <!--begin::Subheader-->
@@ -19,7 +28,7 @@
             <!--begin::content-->
             <div class="card h-100 m-b">
                 <div class="card-body">
-                    <div class="card w-50 shadow p-3 mb-5 bg-white rounded">
+                    <div class="card shadow p-3 mb-5 bg-white rounded">
                         <div class="card-body">
                             <p><?= $data_user_detail['name']; ?></p>
                             <div style="margin-top: 15%; margin-bottom:10%">
@@ -29,11 +38,9 @@
                             <p>Batch#3</p>
                         </div>
                     </div>
-                    <div class=" col text-center w-50 ">
-                        <a href=" <?= site_url('sertifikat/print') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="padding-left: 40px;
-    padding-right: 40px;">Lihat</a>
-                        <a href="<?= site_url('sertifikat/unduh') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="background-color: #15499A;padding-left: 40px;
-    padding-right: 40px;">Unduh</a>
+                    <div class=" col text-center">
+                        <a href=" <?= site_url('sertifikat/print') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Lihat</a>
+                        <a href="<?= site_url('sertifikat/unduh') ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="background-color: #15499a;">Unduh</a>
                     </div>
                 </div>
                 <!--end::content-->

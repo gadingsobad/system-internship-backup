@@ -101,7 +101,7 @@
                 <tr>
                     <td class="row">
                         <?php if ($index['foto'] !== '') { ?>
-                            <img class="img-kegiatan" src="<?= base_url('assets/foto/' . $index['foto']); ?>" style="">
+                            <img class="img-kegiatan" src="<?= base_url('assets/foto/' . $index['foto']); ?>">
                         <?php } else {
                         } ?>
                     </td>
