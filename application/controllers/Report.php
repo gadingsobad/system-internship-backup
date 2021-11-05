@@ -24,10 +24,10 @@ class Report extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/topbar-mobile', $data);
         $this->load->view('templates/topbar', $data);
-        if ($data['data_user_detail']['_resign_date'] == date('Y-m-d')) {
+        if ($data['data_user_detail']['_resign_date'] !== date('Y-m-d')) {
             $this->load->view('menu/report-before', $data);
         }
-        if ($data['data_user_detail']['_resign_date'] !== date('Y-m-d')) {
+        if ($data['data_user_detail']['_resign_date'] == date('Y-m-d')) {
             $this->load->view('menu/report-finished', $data);
         }
         $this->load->view('templates/sidebar');
