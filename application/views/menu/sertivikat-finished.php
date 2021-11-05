@@ -6,6 +6,16 @@
     .col.text-center {
         width: 50%;
     }
+
+    @media only screen and (max-width: 786px) {
+        .card.shadow.p-3.mb-5.bg-white.rounded {
+            width: 100%;
+        }
+
+        .col.text-center {
+            width: 100%;
+        }
+    }
 </style>
 <!--begin::Content-->
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
