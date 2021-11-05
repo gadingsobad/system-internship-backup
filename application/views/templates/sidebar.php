@@ -36,31 +36,55 @@
         <!--begin::Menu Container-->
         <div id="kt_aside_menu" class="aside-menu my-4" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500" style="background: #15499A;">
             <!--begin::Menu Nav-->
-            <ul class="menu-nav">
-                <li <?= $this->uri->segment(1) == 'kegiatan'  ? 'class="menu-item menu-item-active" style="background: #639AEF !important;" ' : 'class="menu-item"' ?> aria-haspopup="true">
-                    <a href="<?= site_url('kegiatan') ?>" class="menu-link">
-                        <i class="far fa-calendar-check mr-5 ml-3" style="color:white;"></i>
-                        <h5 class="menu-text">Kegiatan</h5>
-                    </a>
-                </li>
-            </ul>
-            <ul class="menu-nav">
-                <li <?= $this->uri->segment(1) == 'report'  ? 'class="menu-item menu-item-active" style="background: #639AEF !important;" ' : 'class="menu-item"' ?> aria-haspopup="true">
-                    <a href="<?= site_url('report') ?>" class="menu-link">
-                        <i class="far fa-file-alt mr-5 ml-3" style="color:white;"></i>
-                        <h5 class="menu-text">Laporan Kegiatan</h5>
-                    </a>
-                </li>
-            </ul>
-            <ul class="menu-nav">
-                <li <?= $this->uri->segment(1) == 'sertifikat'  ? 'class="menu-item menu-item-active" style="background: #639AEF !important;" ' : 'class="menu-item"' ?> aria-haspopup="true">
-                    <a href="<?= site_url('sertifikat') ?>" class="menu-link">
-                        <i class="fas fa-award mr-5 ml-3" style="color:white;"></i>
-                        <h5 class="menu-text">Sertifikat</h5>
-                    </a>
-                </li>
-            </ul>
-            <!--end::Menu Nav-->
+            <?php if ($data_user_detail['status'] == 7) {
+            ?>
+                <ul class="menu-nav">
+                    <li <?= $this->uri->segment(1) == 'kegiatan'  ? 'class="menu-item menu-item-active" style="background: #639AEF !important;" ' : 'class="menu-item"' ?> aria-haspopup="true">
+                        <a href="<?= site_url('kegiatan') ?>" class="menu-link">
+                            <i class="far fa-calendar-check mr-5 ml-3" style="color:white;"></i>
+                            <h5 class="menu-text">Kegiatan</h5>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="menu-nav">
+                    <li <?= $this->uri->segment(1) == 'report'  ? 'class="menu-item menu-item-active" style="background: #639AEF !important;" ' : 'class="menu-item"' ?> aria-haspopup="true">
+                        <a href="<?= site_url('report') ?>" class="menu-link">
+                            <i class="far fa-file-alt mr-5 ml-3" style="color:white;"></i>
+                            <h5 class="menu-text">Laporan Kegiatan</h5>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="menu-nav">
+                    <li <?= $this->uri->segment(1) == 'sertifikat'  ? 'class="menu-item menu-item-active" style="background: #639AEF !important;" ' : 'class="menu-item"' ?> aria-haspopup="true">
+                        <a href="<?= site_url('sertifikat') ?>" class="menu-link">
+                            <i class="fas fa-award mr-5 ml-3" style="color:white;"></i>
+                            <h5 class="menu-text">Sertifikat</h5>
+                        </a>
+                    </li>
+                </ul>
+                <!--end::Menu Nav-->
+            <?php
+            } else {
+            ?>
+                <ul class="menu-nav">
+                    <li <?= $this->uri->segment(1) == 'dashboard'  ? 'class="menu-item menu-item-active" style="background: #639AEF !important;" ' : 'class="menu-item"' ?> aria-haspopup="true">
+                        <a href="<?= site_url("mentor/dashboard") ?>" class="menu-link">
+                            <i class="far fa-calendar-check mr-5 ml-3" style="color:white;"></i>
+                            <h5 class="menu-text">Dashboard</h5>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="menu-nav">
+                    <li <?= $this->uri->segment(1) == 'monitoring'  ? 'class="menu-item menu-item-active" style="background: #639AEF !important;" ' : 'class="menu-item"' ?> aria-haspopup="true">
+                        <a href="<?= site_url('mentor/monitoring') ?>" class="menu-link">
+                            <i class="far fa-calendar-check mr-5 ml-3" style="color:white;"></i>
+                            <h5 class="menu-text">Monitoring</h5>
+                        </a>
+                    </li>
+                </ul>
+            <?php
+            } ?>
+
 
             <div style="position:absolute; bottom:0;">
                 <div class="col">

@@ -14,7 +14,8 @@ class Auth extends CI_Controller
 
     public function index()
     {
-
+        $data = $this->auth->cek_data();
+        //var_dump($data);
         $this->form_validation->set_rules('username', 'Username', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
         if ($this->form_validation->run() == false) {
@@ -22,7 +23,6 @@ class Auth extends CI_Controller
             $this->load->view('templates-login/content-login');
             $this->load->view('templates-login/footer-login');
         } else {
-
             $this->_login();
         }
     }
@@ -35,14 +35,17 @@ class Auth extends CI_Controller
         $id = ($user[0]['ID']);
         $user_id = $this->auth->get_id($id);
         //var_dump($user_id[0]['status']);
-        if ($user[0] > 0  && $user_id[0]['status'] == 7) {
+        if ($user[0] > 0  && $user_id[0]['status'] == 7 || $user_id[0]['ID'] == 26 || $user_id[0]['ID'] == 5 || $user_id[0]['ID'] == 27 || $user_id[0]['ID'] == 8 || $user_id[0]['ID'] == 6) {
             $data = [
                 'msg' => $user[0],
                 'detail' => $user_id[0]
             ];
             $this->session->set_userdata($data);
-            //var_dump($data);
-            redirect('kegiatan/welcome');
+            if ($data['detail']['status'] !== "4") {
+                redirect('kegiatan/welcome');
+            } else {
+                redirect('mentor/dashboard');
+            }
         } else {
             $this->session->set_flashdata('message', '<div class="d-flex flex-row-reverse"><div class="alert alert-danger animated fadeInDown mr-5 position-absolute">
             Username atau Password Wrong!

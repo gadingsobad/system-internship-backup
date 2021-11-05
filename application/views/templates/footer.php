@@ -316,6 +316,8 @@
 
     <?php if ($data_user_detail['status'] == 7) {
         $division = "Program Internship";
+    } else {
+        $division = "Internship Mentor";
     } ?>
     <!--begin::Content-->
     <div class="offcanvas-content pr-5 mr-n5">

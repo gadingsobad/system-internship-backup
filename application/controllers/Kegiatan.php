@@ -64,7 +64,7 @@ class Kegiatan extends CI_Controller
         $this->load->view('templates/topbar-mobile', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('menu/kegiatan', $data);
-        $this->load->view('templates/sidebar');
+        $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/footer');
 
         //var_dump($data['data_user_detail']);
@@ -91,7 +91,7 @@ class Kegiatan extends CI_Controller
         $this->load->view('templates/topbar-mobile', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('menu/form-kegiatan', $data);
-        $this->load->view('templates/sidebar');
+        $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/footer');
     }
 
@@ -110,7 +110,7 @@ class Kegiatan extends CI_Controller
         $this->load->view('templates/topbar-mobile', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('menu/kegiatan', $data);
-        $this->load->view('templates/sidebar');
+        $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/footer');
     }
 

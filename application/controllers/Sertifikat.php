@@ -31,7 +31,7 @@ class Sertifikat extends CI_Controller
             $this->load->view('menu/sertivikat-finished', $data);
         }
 
-        $this->load->view('templates/sidebar');
+        $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/footer');
 
         //var_dump($data['data_user_detail']['_resign_date']);

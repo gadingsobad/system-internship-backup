@@ -56,6 +56,21 @@ class M_auth extends CI_Model
         return $login;
     }
 
+    public function cek_data()
+    {
+        $url = 'http://s.soloabadi.com/system-absen/include/curl.php';
+        $data = array(
+            'object' => 'sobad_user',
+            'func' => 'get_all',
+            'data' => array()
+        );
+        $data = $this->auth_curl($url, $data);
+        $login = json_decode($data, true);
+        $login = $this->_check_curl($login);
+
+        return $login;
+    }
+
     public function get_id($id = '')
     {
         $url = 'http://s.soloabadi.com/system-absen/include/curl.php';
