@@ -32,11 +32,11 @@
             </div>
             <div class="col-right">
                 <?php
-                $qrCode = new \Endroid\QrCode\QrCode($data_user_detail['ID']);
-                $qrCode->writeFile('upload/qr-code/' . $data_user_detail['ID'] . '.png');
+                //$qrCode = new \Endroid\QrCode\QrCode($data_user_detail['ID']);
+                //$qrCode->writeFile('upload/qr-code/' . $data_user_detail['ID'] . '.png');
                 ?>
                 <div class="content-5">
-                    <img class="qrcode" src="<?= base_url('upload/qr-code/' . $data_user_detail['ID'] . '.png'); ?>">
+                    <qrcode class="qrcode" value="<?php echo $data_user_detail['ID']; ?>"></qrcode>
                 </div>
                 <div class="content-6">
                     <h6>Batch#3@<?= date('Y') ?></h6>
