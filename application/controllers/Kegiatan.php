@@ -135,7 +135,7 @@ class Kegiatan extends CI_Controller
         if ($foto1['name'] !== null) {
             $config['upload_path'] = './assets/foto'; //path folder
             $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
-            $config['encrypt_name'] = FALSE; //Enkripsi nama yang terupload
+            $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
             $this->upload->initialize($config);
 
             $this->load->library('upload', $config);
@@ -151,7 +151,7 @@ class Kegiatan extends CI_Controller
         if ($foto2['name'] !== null) {
             $config['upload_path'] = './assets/foto'; //path folder
             $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
-            $config['encrypt_name'] = FALSE; //Enkripsi nama yang terupload
+            $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
             $this->upload->initialize($config);
 
             $this->load->library('upload', $config);
@@ -167,7 +167,7 @@ class Kegiatan extends CI_Controller
         if ($foto3['name'] !== null) {
             $config['upload_path'] = './assets/foto'; //path folder
             $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
-            $config['encrypt_name'] = FALSE; //Enkripsi nama yang terupload
+            $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
             $this->upload->initialize($config);
 
             $this->load->library('upload', $config);
@@ -182,7 +182,7 @@ class Kegiatan extends CI_Controller
         if ($foto4['name'] !== null) {
             $config['upload_path'] = './assets/foto'; //path folder
             $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
-            $config['encrypt_name'] = FALSE; //Enkripsi nama yang terupload
+            $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
             $this->upload->initialize($config);
 
             $this->load->library('upload', $config);
@@ -260,7 +260,8 @@ class Kegiatan extends CI_Controller
 
         if ($foto['name']  !== "") {
             $config['upload_path']  = './assets/foto';
-            $config['allowed_types'] = 'jpg|png|gif';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+            $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
 
             $this->load->library('upload', $config);
             $this->upload->do_upload('foto1');
@@ -270,7 +271,8 @@ class Kegiatan extends CI_Controller
 
         if ($foto2['name']  !== "") {
             $config['upload_path']  = './assets/foto';
-            $config['allowed_types'] = 'jpg|png|gif';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+            $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
 
             $this->load->library('upload', $config);
             $this->upload->do_upload('foto2');
@@ -279,7 +281,8 @@ class Kegiatan extends CI_Controller
         }
         if ($foto3['name']  !== "") {
             $config['upload_path']  = './assets/foto';
-            $config['allowed_types'] = 'jpg|png|gif';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+            $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
 
             $this->load->library('upload', $config);
             $this->upload->do_upload('foto3');
@@ -288,7 +291,8 @@ class Kegiatan extends CI_Controller
         }
         if ($foto4['name']  !== "") {
             $config['upload_path']  = './assets/foto';
-            $config['allowed_types'] = 'jpg|png|gif';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+            $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
 
             $this->load->library('upload', $config);
             $this->upload->do_upload('foto4');
