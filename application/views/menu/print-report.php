@@ -97,31 +97,38 @@
             <div class="content-10">
                 <h5>Foto/Dokumentasi</h5>
             </div>
-            <?php if ($index['foto'] !== '') { ?>
-                <div class="content-11">
-                    <img class="img-kegiatan" src="<?= base_url('assets/foto/' . $index['foto']); ?>">
-                </div>
-            <?php } else {
-            } ?>
-
-            <?php if ($index['foto2'] !== '') { ?>
-                <div class="content-12">
-                    <img class="img-kegiatan2" src="<?= base_url('assets/foto/' . $index['foto2']); ?>">
-                </div>
-            <?php } else {
-            } ?>
-            <?php if ($index['foto3'] !== '') { ?>
-                <div class="content-13">
-                    <img class="img-kegiatan3" src="<?= base_url('assets/foto/' . $index['foto3']); ?>">
-                </div>
-            <?php } else {
-            } ?>
-            <?php if ($index['foto4'] !== '') { ?>
-                <div class="content-14">
-                    <img class="img-kegiatan4" src="<?= base_url('assets/foto/' . $index['foto4']); ?>">
-                </div>
-            <?php } else {
-            } ?>
+            <table class="tbl-image">
+                <tr>
+                    <td class="row">
+                        <?php if ($index['foto'] !== '') { ?>
+                            <img class="img-kegiatan" src="<?= base_url('assets/foto/' . $index['foto']); ?>" style="">
+                        <?php } else {
+                        } ?>
+                    </td>
+                    <td class="row">
+                        <?php if ($index['foto2'] !== '') { ?>
+                            <img class="img-kegiatan" src="<?= base_url('assets/foto/' . $index['foto2']); ?>">
+                        <?php } else {
+                        } ?>
+                    </td>
+                </tr>
+            </table>
+            <table class="tbl-image">
+                <tr>
+                    <td class="row">
+                        <?php if ($index['foto3'] !== '') { ?>
+                            <img class="img-kegiatan" src="<?= base_url('assets/foto/' . $index['foto3']); ?>">
+                        <?php } else {
+                        } ?>
+                    </td>
+                    <td class="row">
+                        <?php if ($index['foto4'] !== '') { ?>
+                            <img class="img-kegiatan" src="<?= base_url('assets/foto/' . $index['foto4']); ?>">
+                        <?php } else {
+                        } ?>
+                    </td>
+                </tr>
+            </table>
             <div class="footer">
                 <div class="footer-left">
                     <p>Laporan Magang</p>
