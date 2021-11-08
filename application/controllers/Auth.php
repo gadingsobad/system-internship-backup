@@ -35,6 +35,16 @@ class Auth extends CI_Controller
         $id = ($user[0]['ID']);
         $user_id = $this->auth->get_id($id);
         //var_dump($user_id[0]['status']);
+        if (empty($user[0])) {
+            $this->session->set_flashdata('message', '<div class="d-flex flex-row-reverse"><div class="alert alert-danger animated fadeInDown mr-5 position-absolute">
+            Kamu Tidak lagi terdaftar magang!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            </div>');
+            redirect('auth');
+        }
         if ($user[0] > 0  && $user_id[0]['status'] == 7 || $user_id[0]['ID'] == 26 || $user_id[0]['ID'] == 5 || $user_id[0]['ID'] == 27 || $user_id[0]['ID'] == 8 || $user_id[0]['ID'] == 6) {
             $data = [
                 'msg' => $user[0],
