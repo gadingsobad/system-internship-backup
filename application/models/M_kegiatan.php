@@ -55,9 +55,12 @@ class M_kegiatan extends CI_Model
         return $query;
     }
 
-    public function count_kegiatan()
+    public function count_kegiatan($id_user)
     {
-        return $this->db->get('kegiatan')->num_rows();
+        $this->db->from('kegiatan');
+        $this->db->where('id_user', $id_user);
+        $query = $this->db->get();
+        return $query->num_rows();
     }
 
     function get_mentor_name($name_id = '')

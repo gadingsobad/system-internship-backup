@@ -15,10 +15,22 @@ class Kegiatan extends CI_Controller
     }
 
     public function index()
+
     {
+        $this->auth->curl_login();
+        $data['data_user'] = $this->session->userdata(['msg'][0]);
+        $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
+        $session = ($data['data_user']);
+        $data_session = ($session['ID']);
+        $data['start'] = $this->uri->segment(3);
+
+        $data['title'] = 'Dashboard';
+        $data['image'] = $this->m_user->curl_image();
+        /*=========================================*/
+
         $this->load->library('pagination');
         $config['base_url'] = 'http://localhost/system-internship/kegiatan/index';
-        $config['total_rows'] = $this->m_kegiatan->count_kegiatan();
+        $config['total_rows'] = $this->m_kegiatan->count_kegiatan($session['ID']);
         $config['per_page'] = 10;
         // Styling
         $config['full_tag_open'] = '<div class="d-flex justify-content-between align-items-center flex-wrap"><div class="d-flex flex-wrap py-2 mr-3">';
@@ -51,15 +63,7 @@ class Kegiatan extends CI_Controller
 
         $this->pagination->initialize($config);
 
-        $this->auth->curl_login();
-        $data['data_user'] = $this->session->userdata(['msg'][0]);
-        $data['data_user_detail'] = $this->session->userdata(['detail'][0]);
-        $session = ($data['data_user']);
-        $data_session = ($session['ID']);
-        $data['start'] = $this->uri->segment(3);
         $data['kegiatan'] = $this->m_kegiatan->get_kegiatan($data_session, $config['per_page'], $data['start'])->result_array();
-        $data['title'] = 'Dashboard';
-        $data['image'] = $this->m_user->curl_image();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/topbar-mobile', $data);
         $this->load->view('templates/topbar', $data);
