@@ -27,6 +27,7 @@ class M_kegiatan extends CI_Model
         $this->db->select('*');
         $this->db->limit($limit, $start);
         $this->db->from('kegiatan');
+        $this->db->order_by('date', 'ASC');
         $this->db->where("(id_user=$id_user)");
         $query = $this->db->get();
 
