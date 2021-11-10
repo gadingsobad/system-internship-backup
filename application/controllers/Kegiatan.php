@@ -118,6 +118,22 @@ class Kegiatan extends CI_Controller
         $this->load->view('templates/footer');
     }
 
+    public function resizeImage($gbr)
+    {
+        $config['image_library'] = 'gd2';
+        $config['source_image'] = './assets/foto/' . $gbr['file_name'];
+        $config['create_thumb'] = FALSE;
+        $config['maintain_ratio'] = TRUE;
+        $config['quality'] = '50%';
+        $config['width'] = 600;
+        $config['height'] = 400;
+        $config['new_image'] = './assets/foto/' . $gbr['file_name'];
+        $this->load->library('image_lib', $config);
+        $this->image_lib->initialize($config);
+        $this->image_lib->resize();
+        $this->image_lib->clear();
+    }
+
     public function tambah_kegiatan()
     {
         $this->load->library('upload');
@@ -140,13 +156,14 @@ class Kegiatan extends CI_Controller
             $config['upload_path'] = './assets/foto'; //path folder
             $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
             $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
+
             $this->upload->initialize($config);
 
             $this->load->library('upload', $config);
-
-            $this->upload->do_upload('foto1');
-
-
+            if ($this->upload->do_upload('foto1')) {
+                $gbr = $this->upload->data();
+                $this->resizeImage($gbr);
+            }
 
             $foto1 = $this->upload->data('file_name');
         } else {
@@ -154,32 +171,32 @@ class Kegiatan extends CI_Controller
 
         if ($foto2['name'] !== null) {
             $config['upload_path'] = './assets/foto'; //path folder
-            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+            $config['allowed_types'] = 'gif|jpg|png|jpeg'; //type yang dapat diakses bisa anda sesuaikan
             $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
             $this->upload->initialize($config);
 
             $this->load->library('upload', $config);
 
-            $this->upload->do_upload('foto2');
-
-
-
+            if ($this->upload->do_upload('foto2')) {
+                $foto = $this->upload->data();
+                $this->resizeImage($foto);
+            }
             $foto2 = $this->upload->data('file_name');
         } else {
         }
 
         if ($foto3['name'] !== null) {
             $config['upload_path'] = './assets/foto'; //path folder
-            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+            $config['allowed_types'] = 'gif|jpg|png|jpeg'; //type yang dapat diakses bisa anda sesuaikan
             $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
             $this->upload->initialize($config);
 
             $this->load->library('upload', $config);
 
-            $this->upload->do_upload('foto3');
-
-
-
+            if ($this->upload->do_upload('foto3')) {
+                $foto = $this->upload->data();
+                $this->resizeImage($foto);
+            }
             $foto3 = $this->upload->data('file_name');
         } else {
         }
@@ -191,10 +208,10 @@ class Kegiatan extends CI_Controller
 
             $this->load->library('upload', $config);
 
-            $this->upload->do_upload('foto4');
-
-
-
+            if ($this->upload->do_upload('foto4')) {
+                $foto = $this->upload->data();
+                $this->resizeImage($foto);
+            }
             $foto4 = $this->upload->data('file_name');
         } else {
         }
@@ -266,9 +283,14 @@ class Kegiatan extends CI_Controller
             $config['upload_path']  = './assets/foto';
             $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
             $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
-
+            $config['quality'] = '50%';
+            $config['width'] = 600;
+            $config['height'] = 400;
             $this->load->library('upload', $config);
-            $this->upload->do_upload('foto1');
+            if ($this->upload->do_upload('foto1')) {
+                $foto = $this->upload->data();
+                $this->resizeImage($foto);
+            }
 
             $images1 = $this->upload->data('file_name');
         }
@@ -279,7 +301,10 @@ class Kegiatan extends CI_Controller
             $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
 
             $this->load->library('upload', $config);
-            $this->upload->do_upload('foto2');
+            if ($this->upload->do_upload('foto2')) {
+                $foto = $this->upload->data();
+                $this->resizeImage($foto);
+            }
 
             $images2 = $this->upload->data('file_name');
         }
@@ -289,7 +314,10 @@ class Kegiatan extends CI_Controller
             $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
 
             $this->load->library('upload', $config);
-            $this->upload->do_upload('foto3');
+            if ($this->upload->do_upload('foto3')) {
+                $foto = $this->upload->data();
+                $this->resizeImage($foto);
+            }
 
             $images3 = $this->upload->data('file_name');
         }
@@ -299,7 +327,10 @@ class Kegiatan extends CI_Controller
             $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
 
             $this->load->library('upload', $config);
-            $this->upload->do_upload('foto4');
+            if ($this->upload->do_upload('foto4')) {
+                $foto = $this->upload->data();
+                $this->resizeImage($foto);
+            }
 
             $images4 = $this->upload->data('file_name');
         }
