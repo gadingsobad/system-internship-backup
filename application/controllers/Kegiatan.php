@@ -29,7 +29,7 @@ class Kegiatan extends CI_Controller
         /*=========================================*/
 
         $this->load->library('pagination');
-        $config['base_url'] = 'http://localhost/system-internship/kegiatan/index';
+        $config['base_url'] = 'https://s.soloabadi.com/system-internship/kegiatan/index';
         $config['total_rows'] = $this->m_kegiatan->count_kegiatan($session['ID']);
         $config['per_page'] = 10;
         // Styling
