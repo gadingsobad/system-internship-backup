@@ -52,7 +52,7 @@
                         <div class="conten-r-6">
                             <div class="line-ttd"></div>
                             <h3 style="margin-top: -5px;">C.Lintang Larasati</h3>
-                            <p style="margin-top:-15px">Internship Avisor</p>
+                            <p style="margin-top:-15px">Internship Advisor</p>
                         </div>
                     </div>
                     <div class="col-50-right">
