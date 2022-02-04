@@ -107,6 +107,10 @@ if (!is_php('5.4')) {
 			'_registered'
 		);
 
+		if (function_exists("set_time_limit") == TRUE and @ini_get("safe_mode") == 0) {
+			@set_time_limit(300);
+		}
+
 		$_registered = ini_get('variables_order');
 		foreach (array('E' => '_ENV', 'G' => '_GET', 'P' => '_POST', 'C' => '_COOKIE', 'S' => '_SERVER') as $key => $superglobal) {
 			if (strpos($_registered, $key) === FALSE) {
@@ -508,7 +512,3 @@ if ($EXT->call_hook('display_override') === FALSE) {
  * ------------------------------------------------------
  */
 $EXT->call_hook('post_system');
-
-if (function_exists("set_time_limit") == TRUE and @ini_get("safe_mode") == 0) {
-	@set_time_limit(9000);
-}
