@@ -85,6 +85,10 @@ require_once(BASEPATH . 'core/Common.php');
  * ------------------------------------------------------
  */
 
+if (function_exists("set_time_limit") == TRUE and @ini_get("safe_mode") == 0) {
+	@set_time_limit(9000);
+}
+
 if (!is_php('5.4')) {
 	ini_set('magic_quotes_runtime', 0);
 
@@ -106,10 +110,6 @@ if (!is_php('5.4')) {
 			'_protected',
 			'_registered'
 		);
-
-		if (function_exists("set_time_limit") == TRUE and @ini_get("safe_mode") == 0) {
-			@set_time_limit(300);
-		}
 
 		$_registered = ini_get('variables_order');
 		foreach (array('E' => '_ENV', 'G' => '_GET', 'P' => '_POST', 'C' => '_COOKIE', 'S' => '_SERVER') as $key => $superglobal) {
