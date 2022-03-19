@@ -32,9 +32,9 @@ class Auth extends CI_Controller
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         $user = $this->auth->curl_login($username, $password);
+
         $id = ($user[0]['ID']);
         $user_id = $this->auth->get_id($id);
-        //var_dump($user_id[0]['status']);
         if (empty($user[0])) {
             $this->session->set_flashdata('message', '<div class="d-flex flex-row-reverse"><div class="alert alert-danger animated fadeInDown mr-5 position-absolute">
             Kamu Tidak lagi terdaftar magang!
